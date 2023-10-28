@@ -1,0 +1,21 @@
+{
+    "setting":{},
+    "objs":{
+        "Wall":[
+            {"name":"leftwall","tag":"wall","position":[50,700],"scale":[[0,0],[0.5,0],[0.5,-25],[0,-25]],"collide_visible":true},
+            {"name":"rightwall","tag":"wall","position":[350,700],"scale":[[0,0],[0.5,0],[0.5,-25],[0,-25]],"collide_visible":true}
+        ],
+        "ImageWall":[
+            {
+                "name": "ground",
+                "tag": "wall",
+                "position": [50, 200],
+                "scale": [[0,0],[15.5,0],[15.5,-1],[0, -1]],
+                "rect": [310, 20]
+            }
+        ],
+        "Text":[
+            {"name": "score","tag": "text","visible": true,"layer": 3,"position": [0.0, 800.0],"angle": 0,"size": 50,"color":[255, 255, 255],"Font":"./Galmuri11.ttf","interval" : 10}
+        ]
+    }
+}
