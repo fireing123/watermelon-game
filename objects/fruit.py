@@ -5,12 +5,12 @@ from pygame_phyics import Manger
 from pygame_phyics import PPM
 
 
-fruitscale = [0.5, 1, 2, 2.5, 3, 3.5, 4]
+fruitscale = [0.5, 0.7, 1, 1.2, 1.7, 2.3, 3]
 fruitcolor = [(255, 255, 255), (255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0), (0, 255, 255), (255, 0, 255)]
 
 class Fruit(DynamicObject):
-    def __init__(self, name, tag, visible, position, collid_visible):
-        super().__init__(name, tag, visible, 3, position, 0, fruitscale[tag], "circle", collid_visible, 1, 0.3)
+    def __init__(self, name, tag, visible, position, collide_visible):
+        super().__init__(name, tag, visible, 3, position, 0, fruitscale[tag], "circle", collide_visible, 0.5, 1)
         self.color = fruitcolor[tag]
         
     def on_collision_enter(self, collision):
@@ -29,4 +29,4 @@ class Fruit(DynamicObject):
         position = body.transform * circle.pos * PPM
         position = (position[0] - camera[0], Manger.HEIGHT - position[1] - camera[1])
         pygame.draw.circle(surface, self.color, [int(
-            x) for x in position], int(circle.radius * PPM), 1)
+            x) for x in position], int(circle.radius * PPM))

@@ -4,6 +4,8 @@ from pygame_phyics import ImageObject
 class Wall(StaticObject):
     def __init__(self, name, tag, position, scale: tuple | float, collide_visible):
         super().__init__(name, tag, True, 3, position, 0, scale, "polygon", collide_visible)
+        self.scale = scale
+
 
 class ImageWall(Wall):
     def __init__(self, name, tag, position, scale: tuple | float, rect):
