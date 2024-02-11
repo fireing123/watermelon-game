@@ -1,15 +1,40 @@
 {
     "setting":{
         "score": 15,
+        "death": false,
         "camera": [
+            0,
             0,
             0
         ]
     },
     "objs":{
+        "ParentObject": [{}],
+        "DeathLine":[
+            {
+                "supe": {
+                    "supe": {
+                        "supe": {
+                            "supe": {
+                                "name":"deathLine",
+                                "layer": 3,
+                                "tag":"wall"
+                            },
+                            "visible": true,
+                            "position":[0,100],
+                            "rotation": 0,
+                            "parent_name": "parent"
+                        }
+                    },
+                    "scale":[[0,0],[25,0],[25,-1],[0,-1]],
+                    "shape_type": "polygon",
+                    "collide_visible":true
+                }
+            }
+        ],
         "Wall":[
-            {"name":"leftwall","tag":"wall","position":[50,700],"scale":[[0,0],[0.5,0],[0.5,-25],[0,-25]],"collide_visible":true},
-            {"name":"rightwall","tag":"wall","position":[350,700],"scale":[[0,0],[0.5,0],[0.5,-25],[0,-25]],"collide_visible":true}
+            {"name":"leftwall","tag":"wall","position":[50,700],"scale":[[0,0],[0.5,0],[0.5,-25],[0,-25]] },
+            {"name":"rightwall","tag":"wall","position":[350,700],"scale":[[0,0],[0.5,0],[0.5,-25],[0,-25]]}
         ],
         "ImageWall":[
             {
@@ -21,17 +46,42 @@
             }
         ],
         "Text":[
-            {"name": "score","tag": "text","visible": true,"layer": 3,"position": [0.0, 800.0],"angle": 0,"size": 50,"color":[255, 255, 255],"Font":"./Galmuri11.ttf","interval" : 10}
+            {
+                "supe": {
+                    "supe": {
+                        "supe": {
+                            "name": "score",
+                            "layer": 3,
+                            "tag": "text"
+                        },
+                        "visible": true,
+                        "position": [0.0, 800.0],
+                        "rotation": 0,
+                        "parent_name": "parent"
+                    }
+                },
+                "size": 50,
+                "color":[255, 255, 255],
+                "Font":"./Galmuri11.ttf",
+                "interval" : 10
+            }
         ],
         "Next":[
             {
-                "name": "next", 
-                "tag": "ui", 
-                "visible": true, 
-                "layer": 4, 
+                "supe": {
+                    "supe": {
+                        "name": "next",
+                        "layer": 4,
+                        "tag": "next"
+                    },
+                    "visible": true,
+                    "position": [320, 700],
+                    "rotation": 0,
+                    "parent_name": "parent"
+                },
                 "color": [0, 0, 0], 
-                "scale": 0, 
-                "xy": [320, 700] 
+                "scale": 0
+                
             }
         ]
     }
