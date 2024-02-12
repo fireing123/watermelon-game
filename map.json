@@ -21,28 +21,51 @@
                                 "tag":"wall"
                             },
                             "visible": true,
-                            "position":[0,100],
+                            "position":[-200,100],
                             "rotation": 0,
                             "parent_name": "parent"
                         }
                     },
-                    "scale":[[0,0],[25,0],[25,-1],[0,-1]],
+                    "scale":[[0,0],[50,0],[50,-1],[0,-1]],
                     "shape_type": "polygon",
                     "collide_visible":true
                 }
             }
         ],
         "Wall":[
-            {"name":"leftwall","tag":"wall","position":[50,700],"scale":[[0,0],[0.5,0],[0.5,-25],[0,-25]] },
-            {"name":"rightwall","tag":"wall","position":[350,700],"scale":[[0,0],[0.5,0],[0.5,-25],[0,-25]]}
+            {
+                "supe": {
+                    "name":"leftwall",
+                    "position":[50,700],
+                    "scale":[
+                        [0,0],
+                        [0.5,0],
+                        [0.5,-25],
+                        [0,-25]
+                    ]
+                }
+            },
+            {
+                "supe": {
+                    "name":"rightwall",
+                    "position":[350,700],
+                    "scale":[
+                        [0,0],
+                        [0.5,0],
+                        [0.5,-25],
+                        [0,-25]
+                    ]
+                }
+            }
         ],
         "ImageWall":[
             {
-                "name": "ground",
-                "tag": "wall",
-                "position": [50, 200],
-                "scale": [[0,0],[15.5,0],[15.5,-1],[0, -1]],
-                "rect": [310, 20]
+                "supe": {
+                    "name": "ground",
+                    "position": [50, 200],
+                    "scale": [[0,0],[15.5,0],[15.5,-1],[0, -1]],
+                    "rect": [310, 20]
+                }
             }
         ],
         "Text":[

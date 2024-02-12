@@ -7,7 +7,7 @@ from pygame_phyics.save import save
 import random
 Game.init((400, 800), "WaterMelon Game")
 
-Game.import_objects("objects/")
+Game.import_objects("objects/", debug='detail')
 
 furit_tag = random.randint(0, 3)
 fruitscale = [0.5, 1, 2, 3]
@@ -39,6 +39,8 @@ def main():
                 furit_tag = random.randint(0, 3)
                 next.color = fruitcolor[furit_tag]
                 next.scale = fruitscale[furit_tag] * 10
+                prefab.set_parent()
+                prefab.set_location()
                 prefab.instantiate()
         if Input.get_key_down(pygame.K_q):
             save('./save.json', score=Manger.score)

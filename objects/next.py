@@ -1,10 +1,9 @@
 import pygame
-from pygame_phyics import GameObject
-from pygame_phyics.vector import Vector
+from pygame_phyics import GameObject as _GOB
 
-class Next(GameObject):
+class Next(_GOB):
     def __init__(self, supe, color, scale):
-        super().__init__(supe)
+        super().__init__(*supe)
         self.color = color
         self.scale = scale
         
