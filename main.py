@@ -35,7 +35,7 @@ def main():
             x = mouse.get_pos()[0]
             if 60 < x < 340:
                 pos = x, 750
-                prefab = Fruit(("f", furit_tag, pos))
+                prefab = Fruit("f", furit_tag, pos)
                 furit_tag = random.randint(0, 3)
                 next.color = fruitcolor[furit_tag]
                 next.scale = fruitscale[furit_tag] * 10

@@ -12,77 +12,58 @@
         "ParentObject": [{}],
         "DeathLine":[
             {
-                "supe": {
-                    "supe": {
-                        "supe": {
-                            "supe": {
-                                "name":"deathLine",
-                                "layer": 3,
-                                "tag":"wall"
-                            },
-                            "visible": true,
-                            "position":[-200,100],
-                            "rotation": 0,
-                            "parent_name": "parent"
-                        }
-                    },
-                    "scale":[[0,0],[50,0],[50,-1],[0,-1]],
-                    "shape_type": "polygon",
-                    "collide_visible":true
-                }
+                "name":"deathLine",
+                "layer": 3,
+                "tag":"wall",
+                "visible": true,
+                "position":[-200,100],
+                "rotation": 0,
+                "parent_name": "parent",
+                "scale":[[0,0],[50,0],[50,-1],[0,-1]],
+                "shape_type": "polygon",
+                "collide_visible":true
             }
         ],
         "Wall":[
             {
-                "supe": {
-                    "name":"leftwall",
-                    "position":[50,700],
-                    "scale":[
-                        [0,0],
-                        [0.5,0],
-                        [0.5,-25],
-                        [0,-25]
-                    ]
-                }
+
+                "name":"leftwall",
+                "position":[50,700],
+                "scale":[
+                    [0,0],
+                    [0.5,0],
+                    [0.5,-25],
+                    [0,-25]
+                ]
             },
             {
-                "supe": {
-                    "name":"rightwall",
-                    "position":[350,700],
-                    "scale":[
-                        [0,0],
-                        [0.5,0],
-                        [0.5,-25],
-                        [0,-25]
-                    ]
-                }
+                "name":"rightwall",
+                "position":[350,700],
+                "scale":[
+                    [0,0],
+                    [0.5,0],
+                    [0.5,-25],
+                    [0,-25]
+                ]
             }
         ],
         "ImageWall":[
             {
-                "supe": {
-                    "name": "ground",
-                    "position": [50, 200],
-                    "scale": [[0,0],[15.5,0],[15.5,-1],[0, -1]],
-                    "rect": [310, 20]
-                }
+                "name": "ground",
+                "position": [50, 200],
+                "scale": [[0,0],[15.5,0],[15.5,-1],[0, -1]],
+                "rect": [310, 20]
             }
         ],
         "Text":[
             {
-                "supe": {
-                    "supe": {
-                        "supe": {
-                            "name": "score",
-                            "layer": 3,
-                            "tag": "text"
-                        },
-                        "visible": true,
-                        "position": [0.0, 800.0],
-                        "rotation": 0,
-                        "parent_name": "parent"
-                    }
-                },
+                "name": "score",
+                "layer": 3,
+                "tag": "text",
+                "visible": true,
+                "position": [0.0, 800.0],
+                "rotation": 0,
+                "parent_name": "parent",
                 "size": 50,
                 "color":[255, 255, 255],
                 "Font":"./Galmuri11.ttf",
@@ -91,20 +72,15 @@
         ],
         "Next":[
             {
-                "supe": {
-                    "supe": {
-                        "name": "next",
-                        "layer": 4,
-                        "tag": "next"
-                    },
-                    "visible": true,
-                    "position": [320, 700],
-                    "rotation": 0,
-                    "parent_name": "parent"
-                },
+                "name": "next",
+                "layer": 4,
+                "tag": "next",
+                "visible": true,
+                "position": [320, 700],
+                "rotation": 0,
+                "parent_name": "parent",
                 "color": [0, 0, 0], 
                 "scale": 0
-                
             }
         ]
     }
