@@ -34,8 +34,11 @@ class Fruit(_DyObj):
             circle = self.body.fixtures[0].shape
             body = self.body
             position = body.transform * circle.pos * PPM
-            position = (position[0] - camera[0], Manger.HEIGHT - position[1] - camera[1])
+            position = (position[0] - camera.location.position.x, Manger.HEIGHT - position[1] - camera.location.position.y)
             pygame.draw.circle(surface, self.color, [int(
                 x) for x in position], int(circle.radius * PPM))
         except:
-            pass
+            try:
+                self.delete()
+            except:
+                pass

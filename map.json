@@ -2,14 +2,17 @@
     "setting":{
         "score": 15,
         "death": false,
-        "camera": [
-            0,
-            0,
-            0
-        ]
+        "tile": [],
+        "surface": []
     },
     "objs":{
-        "ParentObject": [{}],
+        "ParentObject": [{}], 
+        "CameraObject": [{
+            "name": "main_cam",
+            "tag": "camera",
+            "position": [0, 0],
+            "rotation": 0
+        }],
         "DeathLine":[
             {
                 "name":"deathLine",

@@ -1,5 +1,5 @@
 import pygame
-from pygame_phyics import *
+from pygame_phyics import game, mouse, Game, Manger
 from pygame_phyics.input import Input
 from objects.fruit import Fruit, fruitcolor, fruitscale
 from objects.next import Next
