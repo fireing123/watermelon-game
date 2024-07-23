@@ -10,8 +10,7 @@ Game.init((400, 800), "WaterMelon Game")
 Game.import_objects("objects/", debug='detail')
 
 furit_tag = random.randint(0, 3)
-fruitscale = [0.5, 1, 2, 3]
-fruitcolor = [(255, 255, 255), (255, 0, 0), (0, 255, 0), (0, 0, 255)]
+
 @game.world("map.json")
 def main():
     score_text : object.Text = Manger.scene.get_objects("score")[0]

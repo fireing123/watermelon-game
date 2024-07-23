@@ -3,9 +3,8 @@ from pygame_phyics import DynamicObject as _DyObj
 from pygame_phyics import Manger
 from pygame_phyics import PPM
 
-
-fruitscale = [0.5, 0.7, 1, 1.2, 1.7, 2.3, 3]
-fruitcolor = [(255, 255, 255), (255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0), (0, 255, 255), (255, 0, 255)]
+fruitscale = [0.5, 1, 2, 3, 4, 6, 7]
+fruitcolor = [(255, 255, 255), (255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 180), (255, 0, 132), (0, 255, 132)]
 
 class Fruit(_DyObj):
     def __init__(self, name, tag, position,):
@@ -13,8 +12,8 @@ class Fruit(_DyObj):
         self.color = fruitcolor[tag]
         
     def on_collision_enter(self, collision):
-        if collision.tag == self.tag:
-            collision.delete()
+        if collision.gameobject.tag == self.tag:
+            collision.gameobject.delete()
             if self.tag != 6:
                 prefab = Fruit("fr", self.tag+1, self.location.position)
                 prefab.set_parent()
