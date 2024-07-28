@@ -9,12 +9,6 @@ class Wall(_Static):
 class ImageWall(Wall):
     def __init__(self, name, position, scale, rect):
         super().__init__(name, position, scale)
-        self.image = ImageObject(self, surface=rect, type="topleft", collide=True)
-        self.image.og_image.fill((255, 255, 255))
-    
-    def update(self):
-        self.image.update()
-    
-    def render(self, surface, camera):
-        super().render(surface, camera)
-        self.image.render(surface, camera)
+        image = ImageObject(self, surface=rect, type="topleft", collide=True)
+        image.og_image.fill((255, 255, 255))
+        self.components.append(image)

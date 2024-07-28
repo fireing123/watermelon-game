@@ -1,12 +1,9 @@
 {
     "setting":{
         "score": 15,
-        "death": false,
-        "tile": [],
-        "surface": []
+        "death": false
     },
     "objs":{
-        "ParentObject": [{}], 
         "CameraObject": [{
             "name": "main_cam",
             "tag": "camera",
@@ -23,8 +20,7 @@
                 "rotation": 0,
                 "parent_name": "parent",
                 "scale":[[0,0],[50,0],[50,-1],[0,-1]],
-                "shape_type": "polygon",
-                "collide_visible":true
+                "shape_type": "polygon"
             }
         ],
         "Wall":[
@@ -76,7 +72,7 @@
         "Next":[
             {
                 "name": "next",
-                "layer": 4,
+                "layer": 3,
                 "tag": "next",
                 "visible": true,
                 "position": [320, 700],

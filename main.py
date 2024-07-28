@@ -5,7 +5,7 @@ from objects.fruit import Fruit, fruitcolor, fruitscale
 from objects.next import Next
 from pygame_phyics.save import save
 import random
-Game.init((400, 800), "WaterMelon Game")
+Game.init((1200, 800), "WaterMelon Game")
 
 Game.import_objects("objects/", debug='detail')
 
@@ -23,7 +23,6 @@ def main():
         pass
     
     def update(cls):
-        
         if Manger.death == True:
             Game.stop()
         
@@ -32,15 +31,12 @@ def main():
         Manger.screen.fill((0, 0, 0))
         if Input.get_mouse_down(0) or Input.get_key_down(pygame.K_k) or Input.get_key_down(pygame.K_g):
             x = mouse.get_pos()[0]
-            if 60 < x < 340:
-                pos = x, 750
-                prefab = Fruit("f", furit_tag, pos)
-                furit_tag = random.randint(0, 3)
-                next.color = fruitcolor[furit_tag]
-                next.scale = fruitscale[furit_tag] * 10
-                prefab.set_parent()
-                prefab.set_location()
-                prefab.instantiate()
+            pos = x, 750
+            prefab = Fruit("f", furit_tag, pos)
+            prefab.instantiate()
+            furit_tag = random.randint(0, 3)
+            next.color = fruitcolor[furit_tag]
+            next.scale = fruitscale[furit_tag] * 10
         if Input.get_key_down(pygame.K_q):
             save('./save.json', score=Manger.score)
     return start, event, update
